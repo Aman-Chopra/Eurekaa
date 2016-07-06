@@ -1,7 +1,7 @@
 package com.sourcey.materiallogindemo;
 
 import android.app.ProgressDialog;
-import android.graphics.PorterDuff;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -12,11 +12,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import butterknife.ButterKnife;
 import butterknife.Bind;
+import butterknife.ButterKnife;
 
 public class SignupActivity extends AppCompatActivity {
     private static final String TAG = "SignupActivity";
+    private static final int REQUEST_SIGNUP = 0;
 
     @Bind(R.id.input_name) EditText _nameText;
     @Bind(R.id.input_email) EditText _emailText;
@@ -41,7 +42,9 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Finish the registration screen and return to the Login activity
-                finish();
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivityForResult(intent, REQUEST_SIGNUP);
+                //finish();
             }
         });
     }
@@ -106,7 +109,7 @@ public class SignupActivity extends AppCompatActivity {
         if (name.isEmpty() || name.length() < 3) {
              nil.setErrorEnabled(true);
              nil.setError("At least 3 characters.");
-            _nameText.getBackground().setColorFilter(getResources().getColor(R.color.red), PorterDuff.Mode.SRC_ATOP);
+            //_nameText.getBackground().setColorFilter(getResources().getColor(R.color.red), PorterDuff.Mode.SRC_ATOP);
              valid = false;
         } else {
              nil.setError(null);
@@ -115,7 +118,7 @@ public class SignupActivity extends AppCompatActivity {
         if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
              eil.setErrorEnabled(true);
              eil.setError("Enter a valid email address.");
-            _emailText.getBackground().setColorFilter(getResources().getColor(R.color.red), PorterDuff.Mode.SRC_ATOP);
+            //_emailText.getBackground().setColorFilter(getResources().getColor(R.color.red), PorterDuff.Mode.SRC_ATOP);
              valid = false;
         } else {
              eil.setError(null);
