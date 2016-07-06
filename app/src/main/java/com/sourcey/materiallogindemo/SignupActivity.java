@@ -1,7 +1,9 @@
 package com.sourcey.materiallogindemo;
 
 import android.app.ProgressDialog;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -86,7 +88,7 @@ public class SignupActivity extends AppCompatActivity {
     }
 
     public void onSignupFailed() {
-        Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), "Sign-up failed!", Toast.LENGTH_LONG).show();
 
         _signupButton.setEnabled(true);
     }
@@ -97,26 +99,34 @@ public class SignupActivity extends AppCompatActivity {
         String name = _nameText.getText().toString();
         String email = _emailText.getText().toString();
         String password = _passwordText.getText().toString();
+        TextInputLayout nil = (TextInputLayout) findViewById(R.id.name_input_layout);
+        TextInputLayout eil = (TextInputLayout) findViewById(R.id.email_input_layout);
+        TextInputLayout pil = (TextInputLayout) findViewById(R.id.passw_input_layout);
 
         if (name.isEmpty() || name.length() < 3) {
-            _nameText.setError("at least 3 characters");
-            valid = false;
+             nil.setErrorEnabled(true);
+             nil.setError("At least 3 characters.");
+            _nameText.getBackground().setColorFilter(getResources().getColor(R.color.red), PorterDuff.Mode.SRC_ATOP);
+             valid = false;
         } else {
-            _nameText.setError(null);
+             nil.setError(null);
         }
 
         if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            _emailText.setError("enter a valid email address");
-            valid = false;
+             eil.setErrorEnabled(true);
+             eil.setError("Enter a valid email address.");
+            _emailText.getBackground().setColorFilter(getResources().getColor(R.color.red), PorterDuff.Mode.SRC_ATOP);
+             valid = false;
         } else {
-            _emailText.setError(null);
+             eil.setError(null);
         }
 
         if (password.isEmpty() || password.length() < 4 || password.length() > 10) {
-            _passwordText.setError("between 4 and 10 alphanumeric characters");
-            valid = false;
+             pil.setErrorEnabled(true);
+             pil.setError("4-10 alphanumeric characters.");
+             valid = false;
         } else {
-            _passwordText.setError(null);
+             pil.setError(null);
         }
 
         return valid;

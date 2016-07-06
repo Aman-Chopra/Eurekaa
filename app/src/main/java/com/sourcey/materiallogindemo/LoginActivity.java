@@ -1,19 +1,20 @@
 package com.sourcey.materiallogindemo;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-
-import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import butterknife.ButterKnife;
 import butterknife.Bind;
+import butterknife.ButterKnife;
 
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
@@ -106,7 +107,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onLoginFailed() {
-        Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), "Login failed!", Toast.LENGTH_LONG).show();
 
         _loginButton.setEnabled(true);
     }
@@ -116,19 +117,26 @@ public class LoginActivity extends AppCompatActivity {
 
         String email = _emailText.getText().toString();
         String password = _passwordText.getText().toString();
+        TextInputLayout til = (TextInputLayout) findViewById(R.id.text_input_layout);
+
 
         if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            _emailText.setError("enter a valid email address");
+            til.setErrorEnabled(true);
+            til.setError("Enter a valid email address.");
+            _emailText.getBackground().setColorFilter(getResources().getColor(R.color.red), PorterDuff.Mode.SRC_ATOP);
             valid = false;
         } else {
-            _emailText.setError(null);
-        }
 
+            til.setError(null);
+        }
+        TextInputLayout till = (TextInputLayout) findViewById(R.id.password_input_layout);
         if (password.isEmpty() || password.length() < 4 || password.length() > 10) {
-            _passwordText.setError("between 4 and 10 alphanumeric characters");
+            till.setErrorEnabled(true);
+            till.setError("4-10 alphanumeric characters.");
+            _passwordText.getBackground().setColorFilter(getResources().getColor(R.color.red), PorterDuff.Mode.SRC_ATOP);
             valid = false;
         } else {
-            _passwordText.setError(null);
+            till.setError(null);
         }
 
         return valid;
