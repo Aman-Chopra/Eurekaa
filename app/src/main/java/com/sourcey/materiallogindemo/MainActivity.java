@@ -5,17 +5,14 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
-import com.microsoft.windowsazure.mobileservices.http.ServiceFilterResponse;
-import com.microsoft.windowsazure.mobileservices.table.TableOperationCallback;
 
 import java.net.MalformedURLException;
 
 
 public class MainActivity extends ActionBarActivity {
-    private MobileServiceClient mClient;
+    public static MobileServiceClient mClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +26,7 @@ public class MainActivity extends ActionBarActivity {
             );}
         catch (MalformedURLException e) {
         }
-        TodoItem item = new TodoItem();
+        /*TodoItem item = new TodoItem();
         item.Text = "Awesome item";
         mClient.getTable(TodoItem.class).insert(item, new TableOperationCallback<TodoItem>() {
             public void onCompleted(TodoItem entity, Exception exception, ServiceFilterResponse response) {
@@ -41,7 +38,7 @@ public class MainActivity extends ActionBarActivity {
                     // Insert failed
                 }
             }
-        });
+        });*/
 
 
         Intent intent = new Intent(this, LoginActivity.class);

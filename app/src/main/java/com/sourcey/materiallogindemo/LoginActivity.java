@@ -13,6 +13,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
+import com.microsoft.windowsazure.mobileservices.http.ServiceFilterResponse;
+import com.microsoft.windowsazure.mobileservices.table.TableOperationCallback;
+
+import java.net.MalformedURLException;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -33,6 +37,14 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+
+        try{
+            mClient = new MobileServiceClient(
+                    "https://eurekaa.azurewebsites.net",
+                    this
+            );}
+        catch (MalformedURLException e) {
+        }
 
         
         _loginButton.setOnClickListener(new View.OnClickListener() {
@@ -61,6 +73,20 @@ public class LoginActivity extends AppCompatActivity {
             onLoginFailed();
             return;
         }
+
+        TodoItem item = new TodoItem();
+        item.Text = "Please";
+        mClient.getTable(TodoItem.class).insert(item, new TableOperationCallback<TodoItem>() {
+            public void onCompleted(TodoItem entity, Exception exception, ServiceFilterResponse response) {
+                if (exception == null) {
+                    Toast.makeText(getBaseContext(), "Insertion successful!", Toast.LENGTH_LONG).show();
+                    // Insert succeeded
+                } else {
+                    Toast.makeText(getBaseContext(), "Insertion failed!", Toast.LENGTH_LONG).show();
+                    // Insert failed
+                }
+            }
+        });
 
         _loginButton.setEnabled(false);
 
