@@ -12,12 +12,16 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private static final int REQUEST_SIGNUP = 0;
+    private MobileServiceClient mClient;
+    //MobileServiceTable<TodoItem> mToDoTable = mClient.getTable(TodoItem.class);
 
     @Bind(R.id.input_email) EditText _emailText;
     @Bind(R.id.input_password) EditText _passwordText;
@@ -29,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+
         
         _loginButton.setOnClickListener(new View.OnClickListener() {
 
