@@ -12,12 +12,20 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
+import com.microsoft.windowsazure.mobileservices.http.ServiceFilterResponse;
+import com.microsoft.windowsazure.mobileservices.table.TableOperationCallback;
+
+import java.net.MalformedURLException;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class SignupActivity extends AppCompatActivity {
     private static final String TAG = "SignupActivity";
     private static final int REQUEST_SIGNUP = 0;
+    private MobileServiceClient mClient;
+    //private MobileServiceTable<TodoItem> mToDoTable;
 
     @Bind(R.id.input_name) EditText _nameText;
     @Bind(R.id.input_email) EditText _emailText;
@@ -30,6 +38,14 @@ public class SignupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
         ButterKnife.bind(this);
+
+        try{
+            mClient = new MobileServiceClient(
+                    "https://eurekaa.azurewebsites.net",
+                    this
+            );}
+        catch (MalformedURLException e) {
+        }
 
         _signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +84,28 @@ public class SignupActivity extends AppCompatActivity {
         String name = _nameText.getText().toString();
         String email = _emailText.getText().toString();
         String password = _passwordText.getText().toString();
+
+
+        TodoItem item = new TodoItem();
+        item.text = name;
+        item.email = email;
+        item.password = password;
+        mClient.getTable(TodoItem.class).insert(item, new TableOperationCallback<TodoItem>() {
+            public void onCompleted(TodoItem entity, Exception exception, ServiceFilterResponse response) {
+                if (exception == null) {
+                    Toast.makeText(getBaseContext(), "Account created successfully", Toast.LENGTH_LONG).show();
+                    // Insert succeeded
+                } else {
+                    Toast.makeText(getBaseContext(), "Insertion failed, please retry!", Toast.LENGTH_LONG).show();
+                    // Insert failed
+                }
+            }
+        });
+
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+
+
 
         // TODO: Implement your own signup logic here.
 

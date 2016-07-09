@@ -2,6 +2,7 @@ package com.sourcey.materiallogindemo;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -13,14 +14,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
-import com.microsoft.windowsazure.mobileservices.MobileServiceException;
 import com.microsoft.windowsazure.mobileservices.MobileServiceList;
-import com.microsoft.windowsazure.mobileservices.http.ServiceFilterResponse;
 import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
-import com.microsoft.windowsazure.mobileservices.table.TableOperationCallback;
 
 import java.net.MalformedURLException;
-import java.util.concurrent.ExecutionException;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -49,22 +46,6 @@ public class LoginActivity extends AppCompatActivity {
             );}
         catch (MalformedURLException e) {
         }
-        mToDoTable = mClient.getTable(TodoItem.class);
-        try {
-            final MobileServiceList<TodoItem> result = mToDoTable.execute().get();
-            for (TodoItem item : result)
-            {
-                String s = item.Text;
-                Toast.makeText(getBaseContext(), s, Toast.LENGTH_LONG).show();
-            }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        } catch (MobileServiceException e) {
-            e.printStackTrace();
-        }
-
 
 
         _loginButton.setOnClickListener(new View.OnClickListener() {
@@ -90,6 +71,8 @@ public class LoginActivity extends AppCompatActivity {
         this.startActivity(intent);
     }
 
+
+
     public void login() {
         Log.d(TAG, "Login");
 
@@ -98,19 +81,42 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        TodoItem item = new TodoItem();
-        item.Text = "Please";
-        mClient.getTable(TodoItem.class).insert(item, new TableOperationCallback<TodoItem>() {
-            public void onCompleted(TodoItem entity, Exception exception, ServiceFilterResponse response) {
-                if (exception == null) {
-                    Toast.makeText(getBaseContext(), "Insertion successful!", Toast.LENGTH_LONG).show();
-                    // Insert succeeded
-                } else {
-                    Toast.makeText(getBaseContext(), "Insertion failed!", Toast.LENGTH_LONG).show();
-                    // Insert failed
+        final String email = _emailText.getText().toString();
+        final String password = _passwordText.getText().toString();
+
+
+            mToDoTable = mClient.getTable(TodoItem.class);
+            new AsyncTask<Void, Void, Void>() {
+                @Override
+                protected Void doInBackground(Void... params) {
+                    int flag = 0;
+                    try {
+                        final MobileServiceList<TodoItem> result =
+                                mToDoTable.execute().get();
+                        String s = " ";
+                        for (TodoItem item : result) {
+                            //Log.i(TAG, "Read object with ID " + item.id);
+                            s = item.email;
+                            if(s.equals("am@fs.com")) {
+                                flag = 1;
+                                break;
+                            }
+
+                        }
+                        if(flag==0){
+                        Toast.makeText(getBaseContext(), "User ID incorrect!! ", Toast.LENGTH_LONG).show();
+                            onLoginFailed();
+
+                        }
+
+                    } catch (Exception exception) {
+                        //createAndShowDialog(exception, "Error");
+                    }
+                    return null;
                 }
-            }
-        });
+            }.execute();
+
+
 
         _loginButton.setEnabled(false);
 
@@ -120,8 +126,8 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog.setMessage("Authenticating...");
         progressDialog.show();
 
-        String email = _emailText.getText().toString();
-        String password = _passwordText.getText().toString();
+
+
 
         // TODO: Implement your own authentication logic here.
 
