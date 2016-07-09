@@ -28,9 +28,14 @@
             android:autoText="false" />
 
         <ImageView android:src="@drawable/start"
-            android:layout_width="wrap_content"
+            android:layout_width="72dp"
             android:layout_height="72dp"
-            android:layout_marginBottom="24dp" />
+            android:layout_marginBottom="24dp"
+            android:id="@+id/selectone"
+            android:clickable="true"
+            android:layout_gravity="center_horizontal"
+            android:focusable="true"
+            android:onClick="clickMe" />
 
         <!--  Email Label -->
         <android.support.design.widget.TextInputLayout

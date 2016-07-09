@@ -13,10 +13,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
+import com.microsoft.windowsazure.mobileservices.MobileServiceException;
+import com.microsoft.windowsazure.mobileservices.MobileServiceList;
 import com.microsoft.windowsazure.mobileservices.http.ServiceFilterResponse;
+import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
 import com.microsoft.windowsazure.mobileservices.table.TableOperationCallback;
 
 import java.net.MalformedURLException;
+import java.util.concurrent.ExecutionException;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -25,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private static final int REQUEST_SIGNUP = 0;
     private MobileServiceClient mClient;
-    //MobileServiceTable<TodoItem> mToDoTable = mClient.getTable(TodoItem.class);
+    private MobileServiceTable<TodoItem> mToDoTable;
 
     @Bind(R.id.input_email) EditText _emailText;
     @Bind(R.id.input_password) EditText _passwordText;
@@ -45,8 +49,24 @@ public class LoginActivity extends AppCompatActivity {
             );}
         catch (MalformedURLException e) {
         }
+        mToDoTable = mClient.getTable(TodoItem.class);
+        try {
+            final MobileServiceList<TodoItem> result = mToDoTable.execute().get();
+            for (TodoItem item : result)
+            {
+                String s = item.Text;
+                Toast.makeText(getBaseContext(), s, Toast.LENGTH_LONG).show();
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (MobileServiceException e) {
+            e.printStackTrace();
+        }
 
-        
+
+
         _loginButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -64,6 +84,10 @@ public class LoginActivity extends AppCompatActivity {
                 startActivityForResult(intent, REQUEST_SIGNUP);
             }
         });
+    }
+    public void clickMe(View notused) {
+        Intent intent = new Intent(this, SignupActivity.class);
+        this.startActivity(intent);
     }
 
     public void login() {
@@ -133,7 +157,9 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onLoginSuccess() {
         _loginButton.setEnabled(true);
-        finish();
+        Intent intent = new Intent(this, SignupActivity.class);
+        startActivity(intent);
+        //finish();
     }
 
     public void onLoginFailed() {
