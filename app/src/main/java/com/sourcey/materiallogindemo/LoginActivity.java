@@ -81,51 +81,8 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        //final String email = _emailText.getText().toString();
-        //final String password = _passwordText.getText().toString();
-
-        //Toast.makeText(getBaseContext(), "Come on! ", Toast.LENGTH_LONG).show();
-            mToDoTable = mClient.getTable(TodoItem.class);
-            new AsyncTask<Void, Void, Void>() {
-                @Override
-                protected Void doInBackground(Void... params) {
-
-                    int flag = 0;
-                    //TextInputLayout til = (TextInputLayout) findViewById(R.id.text_input_layout);
-                    try {
-                        final MobileServiceList<TodoItem> result =
-                                mToDoTable.execute().get();
-                        String s = " ";
-                        for (TodoItem item : result) {
-                            //Log.i(TAG, "Read object with ID " + item.id);
-                            s = item.text;
-                            if(s.equals("bxnd@ncf.com")){
-                                flag = 1;
-                                Toast.makeText(getBaseContext(), "User ID correct!! ", Toast.LENGTH_LONG).show();
-                                break;
-                            }
-
-                        }
-                        if(flag==0){
-                        Toast.makeText(getBaseContext(), "User ID incorrect!! ", Toast.LENGTH_LONG).show();
-                            onLoginFailed();
-
-                        }
-
-                    } catch (Exception exception) {
-                        //createAndShowDialog(exception, "Error");
-                    }
-                    return null;
-                }
-            }.execute();
-
-
-        //Toast.makeText(getBaseContext(), "Back-off ", Toast.LENGTH_LONG).show();
-
-
-
-
-
+        final String email = _emailText.getText().toString();
+        final String password = _passwordText.getText().toString();
 
         _loginButton.setEnabled(false);
 
@@ -135,20 +92,44 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog.setMessage("Authenticating...");
         progressDialog.show();
 
+        final int[] flag = new int[1];
+        mToDoTable = mClient.getTable(TodoItem.class);
+        new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... params) {
+                flag[0] = 0;
+                try {
+                    final MobileServiceList<TodoItem> result =
+                            mToDoTable.execute().get();
+                    String s = "";
+                    for (TodoItem item : result) {
+                        //Log.i(TAG, "Read object with ID " + item.id);
+                        s = item.email;
+                        if (email.equals("ab@gmail.com")) {
+                            flag[0] = 1;
+                            break;
+                        }
 
+                    }
 
-
-        // TODO: Implement your own authentication logic here.
+                } catch (Exception exception) {
+                    progressDialog.dismiss();
+                }
+                return null;
+            }
+        }.execute();
 
         new android.os.Handler().postDelayed(
                 new Runnable() {
                     public void run() {
                         // On complete call either onLoginSuccess or onLoginFailed
-                        onLoginSuccess();
-                        // onLoginFailed();
+                        if (flag[0] == 1)
+                            onLoginSuccess();
+                        else
+                            onLoginFailed();
                         progressDialog.dismiss();
                     }
-                }, 3000);
+                }, 5000);
     }
 
 
@@ -178,7 +159,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onLoginFailed() {
-        Toast.makeText(getBaseContext(), "Login failed!", Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), "User ID or password is incorrect!", Toast.LENGTH_LONG).show();
 
         _loginButton.setEnabled(true);
     }

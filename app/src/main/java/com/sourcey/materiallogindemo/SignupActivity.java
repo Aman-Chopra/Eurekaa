@@ -25,7 +25,6 @@ public class SignupActivity extends AppCompatActivity {
     private static final String TAG = "SignupActivity";
     private static final int REQUEST_SIGNUP = 0;
     private MobileServiceClient mClient;
-    int flag = 0;
     //private MobileServiceTable<TodoItem> mToDoTable;
 
     @Bind(R.id.input_name) EditText _nameText;
@@ -86,9 +85,10 @@ public class SignupActivity extends AppCompatActivity {
         progressDialog.setMessage("Creating Account...");
         progressDialog.show();
 
-        String name = _nameText.getText().toString();
-        String email = _emailText.getText().toString();
-        String password = _passwordText.getText().toString();
+        final String name = _nameText.getText().toString();
+        final String email = _emailText.getText().toString();
+        final String password = _passwordText.getText().toString();
+        final int[] flag = new int[1];
 
 
         TodoItem item = new TodoItem();
@@ -96,27 +96,24 @@ public class SignupActivity extends AppCompatActivity {
         item.email = email;
         item.password = password;
 
+
+        flag[0] = 0;
         mClient.getTable(TodoItem.class).insert(item, new TableOperationCallback<TodoItem>() {
             public void onCompleted(TodoItem entity, Exception exception, ServiceFilterResponse response) {
                 if (exception == null) {
                     Toast.makeText(getBaseContext(), "Account created successfully", Toast.LENGTH_LONG).show();
-                    flag = 1;
+                    flag[0] = 1;
                     // Insert succeeded
                 } else {
-                    Toast.makeText(getBaseContext(), "Insertion failed, please retry!", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(getBaseContext(), "Insertion failed, please retry!", Toast.LENGTH_LONG).show();
                     // Insert failed
                 }
             }
         });
 
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
-            Intent intent = new Intent(this, LoginActivity.class);
-            startActivity(intent);
+
+
 
 
 
@@ -128,16 +125,21 @@ public class SignupActivity extends AppCompatActivity {
                     public void run() {
                         // On complete call either onSignupSuccess or onSignupFailed
                         // depending on success
-                        onSignupSuccess();
-                        // onSignupFailed();
+                        if (flag[0] == 1)
+                            onSignupSuccess();
+                        else
+                          onSignupFailed();
                         progressDialog.dismiss();
                     }
-                }, 3000);
+                }, 5000);
     }
 
 
     public void onSignupSuccess() {
+
         _signupButton.setEnabled(true);
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
         setResult(RESULT_OK, null);
         finish();
     }
