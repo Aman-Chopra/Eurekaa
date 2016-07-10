@@ -26,13 +26,16 @@
             android:theme="@style/AppTheme.Dark" />
         <activity
             android:name=".Listviewdepartments"
-
-            android:label="Verve">
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".About"
             android:theme="@style/AppTheme.Dark" >
             android:label="@string/title_activity_about" >
+        </activity>
+        <activity
+            android:name=".Doctor"
+            android:label="@string/title_activity_doctor" >
         </activity>
     </application>
 
