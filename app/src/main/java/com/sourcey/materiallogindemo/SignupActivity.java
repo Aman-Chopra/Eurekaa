@@ -25,6 +25,7 @@ public class SignupActivity extends AppCompatActivity {
     private static final String TAG = "SignupActivity";
     private static final int REQUEST_SIGNUP = 0;
     private MobileServiceClient mClient;
+    int flag = 0;
     //private MobileServiceTable<TodoItem> mToDoTable;
 
     @Bind(R.id.input_name) EditText _nameText;
@@ -50,7 +51,11 @@ public class SignupActivity extends AppCompatActivity {
         _signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                signup();
+                try {
+                    signup();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -65,7 +70,7 @@ public class SignupActivity extends AppCompatActivity {
         });
     }
 
-    public void signup() {
+    public void signup() throws InterruptedException {
         Log.d(TAG, "Signup");
 
         if (!validate()) {
@@ -90,10 +95,12 @@ public class SignupActivity extends AppCompatActivity {
         item.text = name;
         item.email = email;
         item.password = password;
+
         mClient.getTable(TodoItem.class).insert(item, new TableOperationCallback<TodoItem>() {
             public void onCompleted(TodoItem entity, Exception exception, ServiceFilterResponse response) {
                 if (exception == null) {
                     Toast.makeText(getBaseContext(), "Account created successfully", Toast.LENGTH_LONG).show();
+                    flag = 1;
                     // Insert succeeded
                 } else {
                     Toast.makeText(getBaseContext(), "Insertion failed, please retry!", Toast.LENGTH_LONG).show();
@@ -102,8 +109,15 @@ public class SignupActivity extends AppCompatActivity {
             }
         });
 
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+
 
 
 

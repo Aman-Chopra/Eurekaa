@@ -81,24 +81,27 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        final String email = _emailText.getText().toString();
-        final String password = _passwordText.getText().toString();
+        //final String email = _emailText.getText().toString();
+        //final String password = _passwordText.getText().toString();
 
-
+        //Toast.makeText(getBaseContext(), "Come on! ", Toast.LENGTH_LONG).show();
             mToDoTable = mClient.getTable(TodoItem.class);
             new AsyncTask<Void, Void, Void>() {
                 @Override
                 protected Void doInBackground(Void... params) {
+
                     int flag = 0;
+                    //TextInputLayout til = (TextInputLayout) findViewById(R.id.text_input_layout);
                     try {
                         final MobileServiceList<TodoItem> result =
                                 mToDoTable.execute().get();
                         String s = " ";
                         for (TodoItem item : result) {
                             //Log.i(TAG, "Read object with ID " + item.id);
-                            s = item.email;
-                            if(s.equals("am@fs.com")) {
+                            s = item.text;
+                            if(s.equals("bxnd@ncf.com")){
                                 flag = 1;
+                                Toast.makeText(getBaseContext(), "User ID correct!! ", Toast.LENGTH_LONG).show();
                                 break;
                             }
 
@@ -115,6 +118,12 @@ public class LoginActivity extends AppCompatActivity {
                     return null;
                 }
             }.execute();
+
+
+        //Toast.makeText(getBaseContext(), "Back-off ", Toast.LENGTH_LONG).show();
+
+
+
 
 
 
@@ -163,7 +172,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onLoginSuccess() {
         _loginButton.setEnabled(true);
-        Intent intent = new Intent(this, SignupActivity.class);
+        Intent intent = new Intent(this, Listviewdepartments.class);
         startActivity(intent);
         //finish();
     }
