@@ -105,12 +105,29 @@ public class LoginActivity extends AppCompatActivity {
                     for (TodoItem item : result) {
                         //Log.i(TAG, "Read object with ID " + item.id);
                         s = item.email;
-                        if (email.equals("ab@gmail.com")) {
+                        if (email.equals(s)) {
                             flag[0] = 1;
                             break;
                         }
 
                     }
+                    if(flag[0]==1) {
+                        MobileServiceList<TodoItem> pass = mToDoTable.where()
+                                .field("email").eq(s)
+                                .execute().get();
+                        String passw="";
+                        for (TodoItem item : result) {
+                            passw = item.password;
+                            if (password.equals(passw)) {
+                                flag[0] = 1;
+                                break;
+                            }
+                            else
+                                flag[0] = 0;
+
+                        }
+                    }
+
 
                 } catch (Exception exception) {
                     progressDialog.dismiss();
