@@ -9,20 +9,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Listviewdepartments extends AppCompatActivity {
-    private List<Car> myCars = new ArrayList<Car>();
+public class Neuro extends AppCompatActivity {
+    private List<Brain> myCars = new ArrayList<Brain>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_listviewdepartments);
+        setContentView(R.layout.activity_neuro);
 
         populateCarList();
         populateListView();
@@ -33,25 +32,13 @@ public class Listviewdepartments extends AppCompatActivity {
     }
 
     private void populateCarList(){
-        myCars.add(new Car("Neurology", R.drawable.neurology));
-        myCars.add(new Car("Urology",R.drawable.urology));
-        myCars.add(new Car("Nephrology",R.drawable.nephrology));
-        myCars.add(new Car("Audiology",R.drawable.audiology));
-        myCars.add(new Car("Plastic surgery",R.drawable.plastic));
-        myCars.add(new Car("Ophthalmology", R.drawable.ophthal));
-        myCars.add(new Car("Psychiatry", R.drawable.psych));
-        myCars.add(new Car("Cardiology", R.drawable.cardiology));
-        myCars.add(new Car("Gastroentorology", R.drawable.gastro));
-        myCars.add(new Car("Dermatology", R.drawable.dermatology));
-        myCars.add(new Car("Orthopaedics", R.drawable.ortho));
-        myCars.add(new Car("Medicine", R.drawable.medicine));
-        myCars.add(new Car("Dental", R.drawable.dental));
-        myCars.add(new Car("Women and Child", R.drawable.women));
-        myCars.add(new Car("Ear, nose and throat", R.drawable.ent));
+        myCars.add(new Brain("Neurology"));
+        myCars.add(new Brain("Neurology"));
+
     }
 
     private void populateListView(){
-        ArrayAdapter<Car> adapter = new MyListAdapter();
+        ArrayAdapter<Brain> adapter = new MyListAdapter();
         ListView list = (ListView) findViewById(R.id.listView);
         list.setAdapter(adapter);
     }
@@ -70,8 +57,8 @@ public class Listviewdepartments extends AppCompatActivity {
                 Toast.makeText(Listviewdepartments.this, message, Toast.LENGTH_LONG).show();*/
                 switch (position) {
                     case 0:
-                    Intent myIntent = new Intent(viewClicked.getContext(), Neuro.class);
-                    startActivityForResult(myIntent, 0);
+                        Intent myIntent = new Intent(viewClicked.getContext(), Doctor.class);
+                        startActivityForResult(myIntent, 0);
                         break;
                     case 1:
                         Intent myIntent1 = new Intent(viewClicked.getContext(), SignupActivity.class);
@@ -86,11 +73,11 @@ public class Listviewdepartments extends AppCompatActivity {
 
     }
 
-    private  class MyListAdapter extends ArrayAdapter<Car>
+    private  class MyListAdapter extends ArrayAdapter<Brain>
     {
 
         public MyListAdapter() {
-            super(Listviewdepartments.this, R.layout.item_view, myCars);
+            super(Neuro.this, R.layout.neurology, myCars);
         }
 
         @Override
@@ -98,13 +85,12 @@ public class Listviewdepartments extends AppCompatActivity {
             View itemView = convertView;
             if(itemView == null)
             {
-                itemView = getLayoutInflater().inflate(R.layout.item_view,parent, false);
+                itemView = getLayoutInflater().inflate(R.layout.neurology,parent, false);
             }
 
-            Car currentCar = myCars.get(position);
+            Brain currentCar = myCars.get(position);
 
-            ImageView imageView = (ImageView) itemView.findViewById(R.id.item_icon);
-            imageView.setImageResource(currentCar.getIconID());
+
 
             TextView makeText = (TextView) itemView.findViewById(R.id.item_txtMake);
             makeText.setText(currentCar.getMake());
@@ -124,7 +110,7 @@ public class Listviewdepartments extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_listviewdepartments, menu);
+        getMenuInflater().inflate(R.menu.menu_neuro, menu);
         return true;
     }
 

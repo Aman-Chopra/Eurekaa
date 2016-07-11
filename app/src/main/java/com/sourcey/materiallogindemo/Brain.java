@@ -3,21 +3,21 @@ package com.sourcey.materiallogindemo;
 /**
  * Created by win-8 on 10-07-2016.
  */
-public class Car {
+public class Brain {
     private String make;
 
-    private int iconID;
 
 
-    public Car(String make,
 
-               int iconID
+    public Brain(String make
+
+
                )
     {
         super();
         this.make = make;
 
-        this.iconID = iconID;
+
     }
 
     public String getMake()
@@ -26,9 +26,6 @@ public class Car {
     }
 
 
-    public int getIconID() {
-        return iconID;
-    }
 
 
 
