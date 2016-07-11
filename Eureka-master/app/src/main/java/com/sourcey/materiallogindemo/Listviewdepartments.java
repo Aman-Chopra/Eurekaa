@@ -33,7 +33,7 @@ public class Listviewdepartments extends AppCompatActivity {
     }
 
     private void populateCarList(){
-        myCars.add(new Car("Neurology",22,R.drawable.start,"1"));
+        myCars.add(new Car("Neurology",22,R.drawable.neurology,"1"));
         myCars.add(new Car("Urology",22,R.drawable.urology,"2"));
         myCars.add(new Car("Nephrology",22,R.drawable.nephrology,"3"));
         myCars.add(new Car("Audiology",22,R.drawable.audiology,"4"));
