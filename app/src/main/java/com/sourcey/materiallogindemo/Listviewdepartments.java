@@ -33,13 +33,21 @@ public class Listviewdepartments extends AppCompatActivity {
     }
 
     private void populateCarList(){
-        myCars.add(new Car("lala", 1000, R.drawable.download, "ahhaa"));
-        myCars.add(new Car("lalal", 1400, R.drawable.icon_gif, "ahghaa"));
-        myCars.add(new Car("lalas", 1500, R.drawable.jpg_icon_13473, "ahhdaa"));
-        myCars.add(new Car("lalsa", 1600, R.drawable.dribbble, "ahhasa"));
-        myCars.add(new Car("lalac", 1200, R.drawable.perspective_button_standby, "ahhaah"));
-        myCars.add(new Car("laladc", 12020, R.drawable.weather, "ahfhaah"));
-        myCars.add(new Car("lalasc", 13200, R.drawable.perspective_button_standby, "ahhaaah"));
+        myCars.add(new Car("Neurology", 13200, R.drawable.download, "1"));
+        myCars.add(new Car("Urology", 13200, R.drawable.icon_gif, "2"));
+        myCars.add(new Car("Nephrology", 13200, R.drawable.jpg_icon_13473, "3"));
+        myCars.add(new Car("Audiology", 13200, R.drawable.dribbble, "4"));
+        myCars.add(new Car("Plastic surgery", 13200, R.drawable.perspective_button_standby, "5"));
+        myCars.add(new Car("Ophthalmology", 13200, R.drawable.weather, "6"));
+        myCars.add(new Car("Psychiatry", 13200, R.drawable.perspective_button_standby, "7"));
+        myCars.add(new Car("Cardiology", 13200, R.drawable.perspective_button_standby, "8"));
+        myCars.add(new Car("Gastroentorology", 13200, R.drawable.perspective_button_standby, "9"));
+        myCars.add(new Car("Dermatology", 13200, R.drawable.perspective_button_standby, "10"));
+        myCars.add(new Car("Orthopaedics", 13200, R.drawable.perspective_button_standby, "11"));
+        myCars.add(new Car("Medicine", 13200, R.drawable.perspective_button_standby, "12"));
+        myCars.add(new Car("Dental", 13200, R.drawable.perspective_button_standby, "13"));
+        myCars.add(new Car("Women and Child", 13200, R.drawable.perspective_button_standby, "14"));
+        myCars.add(new Car("Ear, nose and throat", 13200, R.drawable.perspective_button_standby, "15"));
     }
 
     private void populateListView(){
@@ -87,11 +95,7 @@ public class Listviewdepartments extends AppCompatActivity {
             TextView makeText = (TextView) itemView.findViewById(R.id.item_txtMake);
             makeText.setText(currentCar.getMake());
 
-            TextView yearText = (TextView) itemView.findViewById(R.id.item_txtYear);
-            yearText.setText("" + currentCar.getYear());
 
-            TextView conditionText = (TextView) itemView.findViewById(R.id.item_txtCondition);
-            conditionText.setText(currentCar.getCondition());
 
 
 

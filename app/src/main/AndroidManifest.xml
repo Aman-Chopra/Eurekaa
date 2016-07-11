@@ -30,12 +30,12 @@
         </activity>
         <activity
             android:name=".About"
-            android:theme="@style/AppTheme.Dark" >
-            android:label="@string/title_activity_about" >
+            android:theme="@style/AppTheme.Dark"
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".Doctor"
-            android:label="@string/title_activity_doctor" >
+            android:label="Verve" >
         </activity>
     </application>
 

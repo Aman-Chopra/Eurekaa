@@ -32,13 +32,14 @@
             android:text="Dr. Abrahim
 PHD Doctrate."
             android:paddingLeft="20dp"
+            android:textColor="@color/black"
             android:paddingTop="20dp"
             android:layout_marginRight="40dp"
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:layout_centerVertical="true"
             android:layout_gravity="center_horizontal"
-            android:textSize="18dip"
+            android:textSize="22dip"
 
 
             android:layout_weight="0.85"></TextView>
@@ -75,76 +76,51 @@ PHD Doctrate."
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
-            android:text="VERVE"
+            android:text="Schedule"
             android:textColor="@color/black"
-            android:gravity="center"
-            android:textSize="24dip"
+            android:gravity="left"
+            android:textSize="20dip"
             android:background="#00000000"
             android:autoText="false" />
 
-        <ImageView android:src="@drawable/start"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
-            android:layout_marginBottom="24dp"
-
-            android:clickable="true"
-            android:layout_gravity="center_horizontal"
-            android:focusable="true"
-            android:onClick="clickMe" />
-
-        <!--  Email Label -->
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/text_input_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/input_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:textColor="#000000"
-                android:hint="Email"
-                android:textColorHint="#000000" />
-        </android.support.design.widget.TextInputLayout>
-
-        <!--  Password Label -->
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/password_input_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/input_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:hint="Password"
-                android:textColorHint="#000000"
-                android:textColor="#000000" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_login"
+        <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"
-            android:padding="12dp"
-            android:text="Login"
-            android:shadowColor="#5a43ff"
-            style="@android:style/Animation" />
+            android:layout_marginBottom="12dp"
+            android:text="Monday          9:00A.M. - 5:00P.M.
+Tuesday         9:00A.M. - 5:00P.M.
+Wednesday    9:00A.M. - 5:00P.M.
+Thursday        9:00A.M. - 5:00P.M.
+Friday              9:00A.M. - 5:00P.M.
+Saturday         9:00A.M. - 5:00P.M.\n\n"
 
-        <TextView android:id="@+id/link_signup"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:text="No account yet? Create one"
-            android:textColor="@color/jumbo"
-            android:gravity="center"
-            android:textSize="16dip"
+            android:gravity="left"
+            android:textSize="18dip"
             android:background="#00000000"
             android:autoText="false" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Location"
+            android:textColor="@color/black"
+            android:gravity="left"
+            android:textSize="20dip"
+            android:background="#00000000"
+            android:autoText="false" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Old Hospital Block,\nKasturba Hospital.\nFloor No.-1.\nRoom No.-25."
+
+            android:gravity="left"
+            android:textSize="20dip"
+            android:background="#00000000"
+            android:autoText="false" />
+
 
     </LinearLayout>
     </ScrollView>

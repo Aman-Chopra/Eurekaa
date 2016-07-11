@@ -5,9 +5,9 @@ package com.sourcey.materiallogindemo;
  */
 public class Car {
     private String make;
-    private int year;
+
     private int iconID;
-    private String condition;
+
 
     public Car(String make,
                int year,
@@ -16,8 +16,7 @@ public class Car {
     {
         super();
         this.make = make;
-        this.condition = condition;
-        this.year = year;
+
         this.iconID = iconID;
     }
 
@@ -25,17 +24,12 @@ public class Car {
     {
         return make;
     }
-    public int getYear() {
-        return year;
-    }
+
 
     public int getIconID() {
         return iconID;
     }
 
-    public String getCondition() {
-        return condition;
-    }
 
 
 

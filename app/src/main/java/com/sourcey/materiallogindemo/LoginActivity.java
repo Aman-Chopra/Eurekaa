@@ -67,7 +67,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
     public void clickMe(View notused) {
-        Intent intent = new Intent(this, Doctor.class);
+        Intent intent = new Intent(this, About.class);
         this.startActivity(intent);
     }
 
