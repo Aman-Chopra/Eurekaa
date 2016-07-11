@@ -15,13 +15,13 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Neuro extends AppCompatActivity {
+public class Psychaitry extends AppCompatActivity {
     private List<Brain> myCars = new ArrayList<Brain>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_neuro);
+        setContentView(R.layout.activity_psychaitry);
 
         populateCarList();
         populateListView();
@@ -32,12 +32,19 @@ public class Neuro extends AppCompatActivity {
     }
 
     private void populateCarList(){
-        myCars.add(new Brain("Dr. Girish Menon"));
-        myCars.add(new Brain("Dr. Vinod Kumar"));
-        myCars.add(new Brain("Dr. Lakshmi Prasad"));
-        myCars.add(new Brain("Dr. Lakshman I.K."));
-        myCars.add(new Brain("Dr. Sankar Gorthi"));
-        myCars.add(new Brain("Dr. Jayakrishnan C."));
+        myCars.add(new Brain("Dr. P.S.V.N. Sharma"));
+        myCars.add(new Brain("Dr. Samir Praharaj"));
+        myCars.add(new Brain("Dr. Savitha Soman"));
+        myCars.add(new Brain("Dr. R.K. Bhandary"));
+        myCars.add(new Brain("Dr. Gunasagari Rao"));
+        myCars.add(new Brain("Dr. Shripathy Bhat"));
+        myCars.add(new Brain("Dr. Shreejayank K."));
+        myCars.add(new Brain("Dr. Ravindra Munoli"));
+        myCars.add(new Brain("Dr. Sanjeev Kumar"));
+
+
+
+
 
 
     }
@@ -82,7 +89,7 @@ public class Neuro extends AppCompatActivity {
     {
 
         public MyListAdapter() {
-            super(Neuro.this, R.layout.neurology, myCars);
+            super(Psychaitry.this, R.layout.neurology, myCars);
         }
 
         @Override
@@ -115,7 +122,7 @@ public class Neuro extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_neuro, menu);
+        getMenuInflater().inflate(R.menu.menu_psychaitry, menu);
         return true;
     }
 

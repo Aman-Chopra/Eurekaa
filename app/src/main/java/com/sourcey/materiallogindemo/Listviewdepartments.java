@@ -46,7 +46,7 @@ public class Listviewdepartments extends AppCompatActivity {
         myCars.add(new Car("Orthopaedics", R.drawable.ortho));
         myCars.add(new Car("Medicine", R.drawable.medicine));
         myCars.add(new Car("Dental", R.drawable.dental));
-        myCars.add(new Car("Women and Child", R.drawable.women));
+        myCars.add(new Car("Woman and Child", R.drawable.women));
         myCars.add(new Car("Ear, nose and throat", R.drawable.ent));
     }
 
@@ -74,9 +74,64 @@ public class Listviewdepartments extends AppCompatActivity {
                     startActivityForResult(myIntent, 0);
                         break;
                     case 1:
-                        Intent myIntent1 = new Intent(viewClicked.getContext(), SignupActivity.class);
+                        Intent myIntent1 = new Intent(viewClicked.getContext(), Urology.class);
                         startActivityForResult(myIntent1, 0);
                         break;
+                    case 2:
+                        Intent myIntent2 = new Intent(viewClicked.getContext(), Nephrology.class);
+                        startActivityForResult(myIntent2, 0);
+                        break;
+                    case 3:
+                        Intent myIntent3 = new Intent(viewClicked.getContext(), Audiology.class);
+                        startActivityForResult(myIntent3, 0);
+                        break;
+                    case 4:
+                        Intent myIntent4 = new Intent(viewClicked.getContext(), Plastic.class);
+                        startActivityForResult(myIntent4, 0);
+                        break;
+                    case 5:
+                        Intent myIntent5 = new Intent(viewClicked.getContext(), Ophthalmology.class);
+                        startActivityForResult(myIntent5, 0);
+                        break;
+                    case 6:
+                        Intent myIntent6 = new Intent(viewClicked.getContext(), Psychaitry.class);
+                        startActivityForResult(myIntent6, 0);
+                        break;
+                    case 7:
+                        Intent myIntent7 = new Intent(viewClicked.getContext(), Cardiology.class);
+                        startActivityForResult(myIntent7, 0);
+                        break;
+                    case 8:
+                        Intent myIntent8 = new Intent(viewClicked.getContext(), Gastroenterology.class);
+                        startActivityForResult(myIntent8, 0);
+                        break;
+                    case 9:
+                        Intent myIntent9 = new Intent(viewClicked.getContext(), Dermatology.class);
+                        startActivityForResult(myIntent9, 0);
+                        break;
+                    case 10:
+                        Intent myIntent10 = new Intent(viewClicked.getContext(), Orthopaedics.class);
+                        startActivityForResult(myIntent10, 0);
+                        break;
+                    case 11:
+                        Intent myIntent11 = new Intent(viewClicked.getContext(), Medicine.class);
+                        startActivityForResult(myIntent11, 0);
+                        break;
+                    case 12:
+                        Intent myIntent12 = new Intent(viewClicked.getContext(), Dental.class);
+                        startActivityForResult(myIntent12, 0);
+                        break;
+                    case 13:
+                        Intent myIntent13 = new Intent(viewClicked.getContext(), Wc.class);
+                        startActivityForResult(myIntent13, 0);
+                        break;
+                    case 14:
+                        Intent myIntent14 = new Intent(viewClicked.getContext(), Ent.class);
+                        startActivityForResult(myIntent14, 0);
+                        break;
+
+
+
 
                 }
 

@@ -15,13 +15,13 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Neuro extends AppCompatActivity {
+public class Audiology extends AppCompatActivity {
     private List<Brain> myCars = new ArrayList<Brain>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_neuro);
+        setContentView(R.layout.activity_audiology);
 
         populateCarList();
         populateListView();
@@ -32,13 +32,15 @@ public class Neuro extends AppCompatActivity {
     }
 
     private void populateCarList(){
-        myCars.add(new Brain("Dr. Girish Menon"));
-        myCars.add(new Brain("Dr. Vinod Kumar"));
-        myCars.add(new Brain("Dr. Lakshmi Prasad"));
-        myCars.add(new Brain("Dr. Lakshman I.K."));
-        myCars.add(new Brain("Dr. Sankar Gorthi"));
-        myCars.add(new Brain("Dr. Jayakrishnan C."));
-
+        myCars.add(new Brain("Dr. Krishna Y."));
+        myCars.add(new Brain("Dr. B. Rajashekhar"));
+        myCars.add(new Brain("Dr. Venkataraja Aithal"));
+        myCars.add(new Brain("Dr. Veena K.D."));
+        myCars.add(new Brain("Dr. G. Kanaka"));
+        myCars.add(new Brain("Dr. Usha Devadas"));
+        myCars.add(new Brain("Dr. Gopee Krishnan"));
+        myCars.add(new Brain("Dr. Shivani Tiwari"));
+        myCars.add(new Brain("Dr. Sunila John"));
 
     }
 
@@ -82,7 +84,7 @@ public class Neuro extends AppCompatActivity {
     {
 
         public MyListAdapter() {
-            super(Neuro.this, R.layout.neurology, myCars);
+            super(Audiology.this, R.layout.neurology, myCars);
         }
 
         @Override
@@ -115,7 +117,7 @@ public class Neuro extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_neuro, menu);
+        getMenuInflater().inflate(R.menu.menu_audiology, menu);
         return true;
     }
 

@@ -15,13 +15,13 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Neuro extends AppCompatActivity {
+public class Orthopaedics extends AppCompatActivity {
     private List<Brain> myCars = new ArrayList<Brain>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_neuro);
+        setContentView(R.layout.activity_orthopaedics);
 
         populateCarList();
         populateListView();
@@ -32,13 +32,11 @@ public class Neuro extends AppCompatActivity {
     }
 
     private void populateCarList(){
-        myCars.add(new Brain("Dr. Girish Menon"));
-        myCars.add(new Brain("Dr. Vinod Kumar"));
-        myCars.add(new Brain("Dr. Lakshmi Prasad"));
-        myCars.add(new Brain("Dr. Lakshman I.K."));
-        myCars.add(new Brain("Dr. Sankar Gorthi"));
-        myCars.add(new Brain("Dr. Jayakrishnan C."));
-
+        myCars.add(new Brain("Dr. Sharath Kumar Rao"));
+        myCars.add(new Brain("Dr. Kiran Acharaya"));
+        myCars.add(new Brain("Dr. Vivek Pandey"));
+        myCars.add(new Brain("Dr. Shyamsunder Bhat"));
+        myCars.add(new Brain("Dr. Anil Bhat"));
 
     }
 
@@ -82,7 +80,7 @@ public class Neuro extends AppCompatActivity {
     {
 
         public MyListAdapter() {
-            super(Neuro.this, R.layout.neurology, myCars);
+            super(Orthopaedics.this, R.layout.neurology, myCars);
         }
 
         @Override
@@ -115,7 +113,7 @@ public class Neuro extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_neuro, menu);
+        getMenuInflater().inflate(R.menu.menu_orthopaedics, menu);
         return true;
     }
 

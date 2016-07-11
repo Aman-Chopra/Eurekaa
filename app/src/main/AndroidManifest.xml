@@ -39,7 +39,63 @@
         </activity>
         <activity
             android:name=".Neuro"
-            android:label="@string/title_activity_neuro" >
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".Urology"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".Nephrology"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".Audiology"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".Plastic"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".Ophthalmology"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".Psychaitry"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".Cardiology"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".Gastroenterology"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".Dermatology"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".Orthopaedics"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".Medicine"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".Dental"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".Wc"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".Ent"
+            android:label="Verve" >
         </activity>
     </application>
 

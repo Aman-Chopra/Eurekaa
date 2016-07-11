@@ -8,4 +8,18 @@
     <string name="title_activity_doctor">Doctor</string>
     <string name="title_activity_cjg">cjg</string>
     <string name="title_activity_neuro">Neuro</string>
+    <string name="title_activity_urology">Urology</string>
+    <string name="title_activity_nephrology">Nephrology</string>
+    <string name="title_activity_audiology">Audiology</string>
+    <string name="title_activity_plastic">Plastic</string>
+    <string name="title_activity_ophthalmology">Ophthalmology</string>
+    <string name="title_activity_psychaitry">Psychaitry</string>
+    <string name="title_activity_cardiology">Cardiology</string>
+    <string name="title_activity_gastroenterology">Gastroenterology</string>
+    <string name="title_activity_dermatology">Dermatology</string>
+    <string name="title_activity_orthopaedics">Orthopaedics</string>
+    <string name="title_activity_medicine">Medicine</string>
+    <string name="title_activity_dental">Dental</string>
+    <string name="title_activity_wc">Wc</string>
+    <string name="title_activity_ent">Ent</string>
 </resources>
