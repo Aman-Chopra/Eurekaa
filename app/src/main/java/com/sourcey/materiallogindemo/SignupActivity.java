@@ -131,7 +131,7 @@ public class SignupActivity extends AppCompatActivity {
                           onSignupFailed();
                         progressDialog.dismiss();
                     }
-                }, 5000);
+                }, 8000);
     }
 
 
@@ -145,7 +145,7 @@ public class SignupActivity extends AppCompatActivity {
     }
 
     public void onSignupFailed() {
-        Toast.makeText(getBaseContext(), "Sign-up failed!", Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), "Sign-up failed\n Network Issue.!", Toast.LENGTH_LONG).show();
 
         _signupButton.setEnabled(true);
     }

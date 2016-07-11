@@ -41,7 +41,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
-            android:text="Verve is an utility app for Manipal people. It has records of all the doctors of Kasturba Hospital along with the location of their office and schedules.Any person caan just check about the concerned department and easily see the details of doctors."
+            android:text="Verve is n utility app for Manipal people. It has records of all the doctors of Kasturba Hospital along with the location of their office and schedules.Any person can just check about the concerned department and easily see the details of doctors."
             android:textColor="@color/black"
             android:gravity="center"
             android:textSize="18dip"

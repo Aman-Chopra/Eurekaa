@@ -1,5 +1,6 @@
 package com.sourcey.materiallogindemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -11,7 +12,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,18 +58,32 @@ public class Listviewdepartments extends AppCompatActivity {
 
     private void registerClickCallback()
     {
+        final int pos[] = new int[1];
         ListView list = (ListView)findViewById((R.id.listView));
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
 
-                Car clickedCar = myCars.get(position);
+                /*Car clickedCar = myCars.get(position);
                 String message = "You clicked position " + position + " which is car make " + clickedCar.getMake();
-                Toast.makeText(Listviewdepartments.this, message, Toast.LENGTH_LONG).show();
+                Toast.makeText(Listviewdepartments.this, message, Toast.LENGTH_LONG).show();*/
+                switch (position) {
+                    case 0:
+                    Intent myIntent = new Intent(viewClicked.getContext(), About.class);
+                    startActivityForResult(myIntent, 0);
+                        break;
+                    case 1:
+                        Intent myIntent1 = new Intent(viewClicked.getContext(), SignupActivity.class);
+                        startActivityForResult(myIntent1, 0);
+                        break;
+
+                }
 
             }
         });
+        int posi = pos[0];
+
     }
 
     private  class MyListAdapter extends ArrayAdapter<Car>
