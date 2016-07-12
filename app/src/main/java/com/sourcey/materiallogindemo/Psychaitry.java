@@ -40,7 +40,7 @@ public class Psychaitry extends AppCompatActivity {
         myCars.add(new Brain("Dr. Shripathy Bhat"));
         myCars.add(new Brain("Dr. Shreejayank K."));
         myCars.add(new Brain("Dr. Ravindra Munoli"));
-        myCars.add(new Brain("Dr. Sanjeev Kumar"));
+        myCars.add(new Brain("Dr. Avinash Kamath"));
 
 
 
@@ -69,14 +69,41 @@ public class Psychaitry extends AppCompatActivity {
                 Toast.makeText(Listviewdepartments.this, message, Toast.LENGTH_LONG).show();*/
                 switch (position) {
                     case 0:
-                        Intent myIntent = new Intent(viewClicked.getContext(), Doctor.class);
+                        Intent myIntent = new Intent(viewClicked.getContext(), ps1.class);
                         startActivityForResult(myIntent, 0);
                         break;
                     case 1:
-                        Intent myIntent1 = new Intent(viewClicked.getContext(), SignupActivity.class);
+                        Intent myIntent1 = new Intent(viewClicked.getContext(), ps2.class);
                         startActivityForResult(myIntent1, 0);
                         break;
-
+                    case 2:
+                        Intent myIntent2 = new Intent(viewClicked.getContext(), ps3.class);
+                        startActivityForResult(myIntent2, 0);
+                        break;
+                    case 3:
+                        Intent myIntent3 = new Intent(viewClicked.getContext(), ps4.class);
+                        startActivityForResult(myIntent3, 0);
+                        break;
+                    case 4:
+                        Intent myIntent4 = new Intent(viewClicked.getContext(), ps5.class);
+                        startActivityForResult(myIntent4, 0);
+                        break;
+                    case 5:
+                        Intent myIntent5 = new Intent(viewClicked.getContext(), ps6.class);
+                        startActivityForResult(myIntent5, 0);
+                        break;
+                    case 6:
+                        Intent myIntent6 = new Intent(viewClicked.getContext(), ps7.class);
+                        startActivityForResult(myIntent6, 0);
+                        break;
+                    case 7:
+                        Intent myIntent7 = new Intent(viewClicked.getContext(), ps8.class);
+                        startActivityForResult(myIntent7, 0);
+                        break;
+                    case 8:
+                        Intent myIntent8 = new Intent(viewClicked.getContext(), ps9.class);
+                        startActivityForResult(myIntent8, 0);
+                        break;
                 }
 
             }

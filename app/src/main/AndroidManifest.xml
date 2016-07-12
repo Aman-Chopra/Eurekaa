@@ -99,131 +99,407 @@
         </activity>
         <activity
             android:name=".ad1"
-            android:label="@string/title_activity_ad1" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".ad2"
-            android:label="@string/title_activity_ad2" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".ad3"
-            android:label="@string/title_activity_ad3" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".ad4"
-            android:label="@string/title_activity_ad4" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".ad5"
-            android:label="@string/title_activity_ad5" >
+            android:label="Verve">
         </activity>
         <activity
             android:name=".ad6"
-            android:label="@string/title_activity_ad6" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".ad7"
-            android:label="@string/title_activity_ad7" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".ad8"
-            android:label="@string/title_activity_ad8" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".ad9"
-            android:label="@string/title_activity_ad9" >
+            android:label="Verve">
         </activity>
         <activity
             android:name=".c1"
-            android:label="@string/title_activity_c1" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".c5"
-            android:label="@string/title_activity_c5" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".c6"
-            android:label="@string/title_activity_c6" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".c2"
-            android:label="@string/title_activity_c2" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".c3"
-            android:label="@string/title_activity_c3" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".c4"
-            android:label="@string/title_activity_c4" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".den1"
-            android:label="@string/title_activity_den1" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".den2"
-            android:label="@string/title_activity_den2" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".den3"
-            android:label="@string/title_activity_den3" >
+            android:label="Verve">
         </activity>
         <activity
             android:name=".den4"
-            android:label="@string/title_activity_den4" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".den5"
-            android:label="@string/title_activity_den5" >
+            android:label="Verve">
         </activity>
         <activity
             android:name=".der1"
-            android:label="@string/title_activity_der1" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".der2"
-            android:label="@string/title_activity_der2" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".der3"
-            android:label="@string/title_activity_der3" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".der4"
-            android:label="@string/title_activity_der4" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".der5"
-            android:label="@string/title_activity_der5" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".der6"
-            android:label="@string/title_activity_der6" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".e1"
-            android:label="@string/title_activity_e1" >
+            android:label="Verve">
         </activity>
         <activity
             android:name=".e2"
-            android:label="@string/title_activity_e2" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".e3"
-            android:label="@string/title_activity_e3" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".e4"
-            android:label="@string/title_activity_e4" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".e5"
-            android:label="@string/title_activity_e5" >
+            android:label="Verve" >
         </activity>
         <activity
             android:name=".e6"
-            android:label="@string/title_activity_e6" >
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".g1"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".g2"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".g3"
+            android:label="Verve">
+        </activity>
+        <activity
+            android:name=".m1"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".m2"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".m3"
+            android:label="Verve">
+        </activity>
+        <activity
+            android:name=".m4"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".m5"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".m6"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".m7"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".m8"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".m9"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".m10"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".n1"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".n2"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".n3"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".n4"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".n5"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".n6"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".n7"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".n8"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".n9"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".ne1"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".ne2"
+            android:label="Verve">
+        </activity>
+        <activity
+            android:name=".ne3"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".ne4"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".ne5"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".ne6"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".o1"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".o2"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".o3"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".o4"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".o5"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".o6"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".o7"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".o8"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".o9"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".or1"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".or2"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".or3"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".or4"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".or5"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".p1"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".p2"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".p3"
+            android:label="Verve">
+        </activity>
+        <activity
+            android:name=".p4"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".ps1"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".ps2"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".ps3"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".ps4"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".ps5"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".ps6"
+            android:label="Verve">
+        </activity>
+        <activity
+            android:name=".ps7"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".ps8"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".ps9"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".u1"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".u2"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".u3"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".u4"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".u5"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".u6"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".u7"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".u8"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".u9"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".w1"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".w2"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".w3"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".w4"
+            android:label="Verve" >
+        </activity>
+        <activity
+            android:name=".w5"
+            android:label="@string/title_activity_w5" >
         </activity>
     </application>
 

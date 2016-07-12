@@ -35,7 +35,7 @@
 
             android:layout_gravity="center_horizontal"
             android:focusable="true"
-            android:onClick="clickMe" />
+             />
 
         <TextView
             android:layout_width="fill_parent"

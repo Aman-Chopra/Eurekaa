@@ -146,7 +146,7 @@ public class LoginActivity extends AppCompatActivity {
                             onLoginFailed();
                         progressDialog.dismiss();
                     }
-                }, 5000);
+                }, 12000);
     }
 
 

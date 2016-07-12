@@ -58,12 +58,16 @@ public class Gastroenterology extends AppCompatActivity {
                 Toast.makeText(Listviewdepartments.this, message, Toast.LENGTH_LONG).show();*/
                 switch (position) {
                     case 0:
-                        Intent myIntent = new Intent(viewClicked.getContext(), Doctor.class);
+                        Intent myIntent = new Intent(viewClicked.getContext(), g1.class);
                         startActivityForResult(myIntent, 0);
                         break;
                     case 1:
-                        Intent myIntent1 = new Intent(viewClicked.getContext(), SignupActivity.class);
+                        Intent myIntent1 = new Intent(viewClicked.getContext(), g3.class);
                         startActivityForResult(myIntent1, 0);
+                        break;
+                    case 2:
+                        Intent myIntent2 = new Intent(viewClicked.getContext(), g2.class);
+                        startActivityForResult(myIntent2, 0);
                         break;
 
                 }

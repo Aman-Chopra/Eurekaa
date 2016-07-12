@@ -35,7 +35,7 @@ public class Urology extends AppCompatActivity {
         myCars.add(new Brain("Dr. Joseph Thomas"));
         myCars.add(new Brain("Dr. Sunil Pillai"));
         myCars.add(new Brain("Dr. Avinash"));
-        myCars.add(new Brain("Dr. Padmaraj Hedge"));
+        myCars.add(new Brain("Dr. Padmaraj Hegde"));
         myCars.add(new Brain("Dr. Praveen Kumar S."));
         myCars.add(new Brain("Dr. Nishant K."));
         myCars.add(new Brain("Dr. Arun Chawla"));
@@ -64,14 +64,41 @@ public class Urology extends AppCompatActivity {
                 Toast.makeText(Listviewdepartments.this, message, Toast.LENGTH_LONG).show();*/
                 switch (position) {
                     case 0:
-                        Intent myIntent = new Intent(viewClicked.getContext(), Doctor.class);
+                        Intent myIntent = new Intent(viewClicked.getContext(), u1.class);
                         startActivityForResult(myIntent, 0);
                         break;
                     case 1:
-                        Intent myIntent1 = new Intent(viewClicked.getContext(), SignupActivity.class);
+                        Intent myIntent1 = new Intent(viewClicked.getContext(), u2.class);
                         startActivityForResult(myIntent1, 0);
                         break;
-
+                    case 2:
+                        Intent myIntent2 = new Intent(viewClicked.getContext(), u3.class);
+                        startActivityForResult(myIntent2, 0);
+                        break;
+                    case 3:
+                        Intent myIntent3 = new Intent(viewClicked.getContext(), u4.class);
+                        startActivityForResult(myIntent3, 0);
+                        break;
+                    case 4:
+                        Intent myIntent4 = new Intent(viewClicked.getContext(), u5.class);
+                        startActivityForResult(myIntent4, 0);
+                        break;
+                    case 5:
+                        Intent myIntent5 = new Intent(viewClicked.getContext(), u6.class);
+                        startActivityForResult(myIntent5, 0);
+                        break;
+                    case 6:
+                        Intent myIntent6 = new Intent(viewClicked.getContext(), u7.class);
+                        startActivityForResult(myIntent6, 0);
+                        break;
+                    case 7:
+                        Intent myIntent7 = new Intent(viewClicked.getContext(), u8.class);
+                        startActivityForResult(myIntent7, 0);
+                        break;
+                    case 8:
+                        Intent myIntent8 = new Intent(viewClicked.getContext(), u9.class);
+                        startActivityForResult(myIntent8, 0);
+                        break;
                 }
 
             }
