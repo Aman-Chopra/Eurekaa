@@ -14,7 +14,7 @@
         android:id="@+id/linearLayout">
 
 
-        <ImageView android:src="@drawable/audiology"
+        <ImageView android:src="@drawable/dermatology"
             android:layout_width="100dp"
             android:layout_height="120dp"
             android:id="@+id/selectone"
@@ -29,7 +29,8 @@
 
         <TextView
             android:id="@+id/usernameTextView"
-            android:text="Dr. Gopee Krishnan.\nAsst. Professor."
+            android:text="Dr. Raghvendra Rao.
+Asso. Professor.\nMD,DNB"
             android:paddingLeft="20dp"
             android:textColor="@color/black"
             android:paddingTop="20dp"
@@ -87,9 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:text="Monday          9:00A.M. - 5:00P.M.
-Tuesday         9:00A.M. - 5:00P.M.
 Wednesday    9:00A.M. - 5:00P.M.
-Thursday        9:00A.M. - 5:00P.M.
 Friday              9:00A.M. - 5:00P.M.\n\n\n"
 
                 android:gravity="left"
@@ -112,7 +111,7 @@ Friday              9:00A.M. - 5:00P.M.\n\n\n"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
-                android:text="Old Hospital Block,\nKasturba Hospital.\nFloor No.-2.\nRoom No.-27."
+                android:text="Old Hospital Block,\nKasturba Hospital.\nFloor No.-2.\nRoom No.-21."
 
                 android:gravity="left"
                 android:textSize="20dip"

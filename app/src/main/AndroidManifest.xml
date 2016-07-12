@@ -157,6 +157,74 @@
             android:name=".c4"
             android:label="@string/title_activity_c4" >
         </activity>
+        <activity
+            android:name=".den1"
+            android:label="@string/title_activity_den1" >
+        </activity>
+        <activity
+            android:name=".den2"
+            android:label="@string/title_activity_den2" >
+        </activity>
+        <activity
+            android:name=".den3"
+            android:label="@string/title_activity_den3" >
+        </activity>
+        <activity
+            android:name=".den4"
+            android:label="@string/title_activity_den4" >
+        </activity>
+        <activity
+            android:name=".den5"
+            android:label="@string/title_activity_den5" >
+        </activity>
+        <activity
+            android:name=".der1"
+            android:label="@string/title_activity_der1" >
+        </activity>
+        <activity
+            android:name=".der2"
+            android:label="@string/title_activity_der2" >
+        </activity>
+        <activity
+            android:name=".der3"
+            android:label="@string/title_activity_der3" >
+        </activity>
+        <activity
+            android:name=".der4"
+            android:label="@string/title_activity_der4" >
+        </activity>
+        <activity
+            android:name=".der5"
+            android:label="@string/title_activity_der5" >
+        </activity>
+        <activity
+            android:name=".der6"
+            android:label="@string/title_activity_der6" >
+        </activity>
+        <activity
+            android:name=".e1"
+            android:label="@string/title_activity_e1" >
+        </activity>
+        <activity
+            android:name=".e2"
+            android:label="@string/title_activity_e2" >
+        </activity>
+        <activity
+            android:name=".e3"
+            android:label="@string/title_activity_e3" >
+        </activity>
+        <activity
+            android:name=".e4"
+            android:label="@string/title_activity_e4" >
+        </activity>
+        <activity
+            android:name=".e5"
+            android:label="@string/title_activity_e5" >
+        </activity>
+        <activity
+            android:name=".e6"
+            android:label="@string/title_activity_e6" >
+        </activity>
     </application>
 
 </manifest>

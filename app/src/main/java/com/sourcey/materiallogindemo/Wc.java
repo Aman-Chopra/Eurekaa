@@ -32,10 +32,11 @@ public class Wc extends AppCompatActivity {
     }
 
     private void populateCarList(){
-        myCars.add(new Brain("Dr. Akhila Dilip"));
-        myCars.add(new Brain("Dr. Krishna C."));
-        myCars.add(new Brain("Dr. Mala Sibal"));
-        myCars.add(new Brain("Dr. Thankam S."));
+        myCars.add(new Brain("Dr. Pratap Kumar"));
+        myCars.add(new Brain("Dr. Muralidhar Pai"));
+        myCars.add(new Brain("Dr. Lavanya Rai"));
+        myCars.add(new Brain("Dr. Jyothi Shetty"));
+        myCars.add(new Brain("Dr. Shripad Heddar"));
 
     }
 

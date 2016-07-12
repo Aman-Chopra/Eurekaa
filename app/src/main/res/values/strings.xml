@@ -37,4 +37,21 @@
     <string name="title_activity_c2">c2</string>
     <string name="title_activity_c3">c3</string>
     <string name="title_activity_c4">c4</string>
+    <string name="title_activity_den1">den1</string>
+    <string name="title_activity_den2">den2</string>
+    <string name="title_activity_den3">den3</string>
+    <string name="title_activity_den4">den4</string>
+    <string name="title_activity_den5">den5</string>
+    <string name="title_activity_der1">der1</string>
+    <string name="title_activity_der2">der2</string>
+    <string name="title_activity_der3">der3</string>
+    <string name="title_activity_der4">der4</string>
+    <string name="title_activity_der5">der5</string>
+    <string name="title_activity_der6">der6</string>
+    <string name="title_activity_e1">e1</string>
+    <string name="title_activity_e2">e2</string>
+    <string name="title_activity_e3">e3</string>
+    <string name="title_activity_e4">e4</string>
+    <string name="title_activity_e5">e5</string>
+    <string name="title_activity_e6">e6</string>
 </resources>

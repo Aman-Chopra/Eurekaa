@@ -29,8 +29,7 @@
 
         <TextView
             android:id="@+id/usernameTextView"
-            android:text="Dr. Venkataraja Aithal.\n
-Professor."
+            android:text="Dr. Venkataraja Aithal.\nProfessor."
             android:paddingLeft="20dp"
             android:textColor="@color/black"
             android:paddingTop="20dp"

@@ -62,12 +62,28 @@ public class Ent extends AppCompatActivity {
                 Toast.makeText(Listviewdepartments.this, message, Toast.LENGTH_LONG).show();*/
                 switch (position) {
                     case 0:
-                        Intent myIntent = new Intent(viewClicked.getContext(), Doctor.class);
+                        Intent myIntent = new Intent(viewClicked.getContext(), e1.class);
                         startActivityForResult(myIntent, 0);
                         break;
                     case 1:
-                        Intent myIntent1 = new Intent(viewClicked.getContext(), SignupActivity.class);
+                        Intent myIntent1 = new Intent(viewClicked.getContext(), e2.class);
                         startActivityForResult(myIntent1, 0);
+                        break;
+                    case 2:
+                        Intent myIntent2 = new Intent(viewClicked.getContext(), e3.class);
+                        startActivityForResult(myIntent2, 0);
+                        break;
+                    case 3:
+                        Intent myIntent3 = new Intent(viewClicked.getContext(), e4.class);
+                        startActivityForResult(myIntent3, 0);
+                        break;
+                    case 4:
+                        Intent myIntent4 = new Intent(viewClicked.getContext(), e5.class);
+                        startActivityForResult(myIntent4, 0);
+                        break;
+                    case 5:
+                        Intent myIntent5 = new Intent(viewClicked.getContext(), e6.class);
+                        startActivityForResult(myIntent5, 0);
                         break;
 
                 }

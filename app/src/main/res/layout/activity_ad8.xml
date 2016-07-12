@@ -29,7 +29,7 @@
 
         <TextView
             android:id="@+id/usernameTextView"
-            android:text="Dr. Shivani Tiwari
+            android:text="Dr. Shivani Tiwari.
 Asst. Professor."
             android:paddingLeft="20dp"
             android:textColor="@color/black"
