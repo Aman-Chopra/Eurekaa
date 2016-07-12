@@ -22,4 +22,19 @@
     <string name="title_activity_dental">Dental</string>
     <string name="title_activity_wc">Wc</string>
     <string name="title_activity_ent">Ent</string>
+    <string name="title_activity_ad1">ad1</string>
+    <string name="title_activity_ad2">ad2</string>
+    <string name="title_activity_ad3">ad3</string>
+    <string name="title_activity_ad4">ad4</string>
+    <string name="title_activity_ad5">ad5</string>
+    <string name="title_activity_ad6">ad6</string>
+    <string name="title_activity_ad7">ad7</string>
+    <string name="title_activity_ad8">ad8</string>
+    <string name="title_activity_ad9">ad9</string>
+    <string name="title_activity_c1">c1</string>
+    <string name="title_activity_c5">c5</string>
+    <string name="title_activity_c6">c6</string>
+    <string name="title_activity_c2">c2</string>
+    <string name="title_activity_c3">c3</string>
+    <string name="title_activity_c4">c4</string>
 </resources>

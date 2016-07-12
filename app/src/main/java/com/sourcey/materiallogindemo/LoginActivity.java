@@ -176,7 +176,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onLoginFailed() {
-        Toast.makeText(getBaseContext(), "User ID or password is incorrect!\n You may try to check your connection", Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), "User ID or password is incorrect!\nYou may try to check your connection", Toast.LENGTH_LONG).show();
 
         _loginButton.setEnabled(true);
     }

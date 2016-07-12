@@ -97,6 +97,66 @@
             android:name=".Ent"
             android:label="Verve" >
         </activity>
+        <activity
+            android:name=".ad1"
+            android:label="@string/title_activity_ad1" >
+        </activity>
+        <activity
+            android:name=".ad2"
+            android:label="@string/title_activity_ad2" >
+        </activity>
+        <activity
+            android:name=".ad3"
+            android:label="@string/title_activity_ad3" >
+        </activity>
+        <activity
+            android:name=".ad4"
+            android:label="@string/title_activity_ad4" >
+        </activity>
+        <activity
+            android:name=".ad5"
+            android:label="@string/title_activity_ad5" >
+        </activity>
+        <activity
+            android:name=".ad6"
+            android:label="@string/title_activity_ad6" >
+        </activity>
+        <activity
+            android:name=".ad7"
+            android:label="@string/title_activity_ad7" >
+        </activity>
+        <activity
+            android:name=".ad8"
+            android:label="@string/title_activity_ad8" >
+        </activity>
+        <activity
+            android:name=".ad9"
+            android:label="@string/title_activity_ad9" >
+        </activity>
+        <activity
+            android:name=".c1"
+            android:label="@string/title_activity_c1" >
+        </activity>
+        <activity
+            android:name=".c5"
+            android:label="@string/title_activity_c5" >
+        </activity>
+        <activity
+            android:name=".c6"
+            android:label="@string/title_activity_c6" >
+        </activity>
+        <activity
+            android:name=".c2"
+            android:label="@string/title_activity_c2" >
+        </activity>
+        <activity
+            android:name=".c3"
+            android:label="@string/title_activity_c3" >
+        </activity>
+        <activity
+            android:name=".c4"
+            android:label="@string/title_activity_c4" >
+        </activity>
     </application>
 
 </manifest>
