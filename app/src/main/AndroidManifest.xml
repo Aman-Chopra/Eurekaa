@@ -499,7 +499,7 @@
         </activity>
         <activity
             android:name=".w5"
-            android:label="@string/title_activity_w5" >
+            android:label="Verve" >
         </activity>
     </application>
 
