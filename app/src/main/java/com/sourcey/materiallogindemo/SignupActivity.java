@@ -145,7 +145,7 @@ public class SignupActivity extends AppCompatActivity {
     }
 
     public void onSignupFailed() {
-        Toast.makeText(getBaseContext(), "Sign-up failed\nNetwork Issue.!", Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), "Sign-up failed\nMay be Network Issues.!", Toast.LENGTH_LONG).show();
 
         _signupButton.setEnabled(true);
     }
