@@ -32,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     @Bind(R.id.input_password) EditText _passwordText;
     @Bind(R.id.btn_login) Button _loginButton;
     @Bind(R.id.link_signup) TextView _signupLink;
+    @Bind(R.id.link_see) TextView _listLink;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -62,6 +63,16 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Start the Signup activity
                 Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
+                startActivityForResult(intent, REQUEST_SIGNUP);
+            }
+        });
+
+        _listLink.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // Start the Signup activity
+                Intent intent = new Intent(getApplicationContext(), Listviewdepartments.class);
                 startActivityForResult(intent, REQUEST_SIGNUP);
             }
         });
